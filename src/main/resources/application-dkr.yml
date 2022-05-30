@@ -1,0 +1,26 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: user-service
+
+  jpa:
+    hibernate:
+      ddl- auto: update
+      show- sql: false
+
+
+
+  datasource:
+    url: jdbc:mysql://mysql-userdb:3306/user_db
+    username: root
+    password: userdb123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+
+##########################################################
+
+order-service:
+  base-url: http://order-app:8083/api
+  order-url: /order/getOrdersByUserId

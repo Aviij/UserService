@@ -1,0 +1,21 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: user-service
+
+##########################################################
+
+order-service:
+  base-url: http://order-app:8083/api
+  order-url: /order/getOrdersByUserId
+
+logging:
+  file:
+  pattern:
+    console: "%d %d-5level %logger : %msg%n"
+    file: "%d %d-5level [%thread] %logger : %msg%n"
+  level:
+    com.userservice: DEBUG
+    com.hibernate: ERROR
